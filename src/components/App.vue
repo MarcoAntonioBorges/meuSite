@@ -1,17 +1,23 @@
 <template>
   <div>
+    <navbar></navbar>
     <h1>Welcome to my website</h1>
-    <h2>My time to build the website:</h2>
+    <h2>My time to build this website:</h2>
     <h3>Days: {{ days }} Hours: {{ hours }} Minutes: {{ minutes }} Seconds: {{ seconds }}</h3>
   </div>
 </template>
 
 <script>
-import { setInterval } from 'timers';
 /* eslint-disable */
+import { setInterval } from 'timers';
+import Navbar from './Header/Navbar.vue';
+
 export default {
   name: 'App',
-  data() {
+  components:{
+    Navbar,
+  },
+data() {
     return {
       timer: null,
       days: null,
