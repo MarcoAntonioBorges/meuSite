@@ -26,11 +26,41 @@ export default {
 
 <style scoped>
   .header{
-    margin: 0;
+    display: flex;
+    flex: 1 1 1;
     width: 100%;
-    height: 150px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     background-color: #333;
-    color: #fff;
-    
+    align-items: flex-start;
+    align-content: flex-start;
+  } 
+  .header ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 50%;
+    align-self: stretch;
+    background-color: #fff;
+    padding:10px;
+  }
+  .header ul li{
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    list-style-type: none;
+    align-self: stretch;
+    padding: 5px;
+  }
+  .header ul li:hover{
+    transition: all .5s;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
   }
 </style>

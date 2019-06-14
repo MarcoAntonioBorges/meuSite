@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="count-timer">
     <navbar></navbar>
     <h1>Welcome to my website</h1>
     <h2>My time to build this website:</h2>
@@ -75,5 +75,7 @@ data() {
 </script>
 
 <style>
-
+  #count-timer{
+    text-align: center;
+  }
 </style>
