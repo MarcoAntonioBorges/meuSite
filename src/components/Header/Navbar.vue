@@ -2,9 +2,9 @@
     <div>
       <div class="header">
         <ul>
-          <li>Item 01</li>
-          <li>Item 01</li>
-          <li>Item 01</li>
+          <li> {{ data.projeto }} </li>
+          <li>{{ data.home }}</li>
+          <li>{{ data.social }}</li>
         </ul>
       </div>
     </div>
@@ -15,7 +15,11 @@
 export default {
   data(){
     return {
-      data:'',
+      data:{
+        projeto: "</Project>",
+        home: "</Home>",
+        social: "</Social>",
+      },
     }
   },
   methods: {
@@ -32,7 +36,7 @@ export default {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #333;
+    background-color: cornflowerblue;
     align-items: flex-start;
     align-content: flex-start;
   } 
@@ -45,7 +49,7 @@ export default {
     align-content: flex-start;
     width: 50%;
     align-self: stretch;
-    background-color: #fff;
+    /*background-color: #fff;*/
     padding:10px;
   }
   .header ul li{
@@ -56,11 +60,18 @@ export default {
     list-style-type: none;
     align-self: stretch;
     padding: 5px;
+    color: white;
+    font-family: monospace;
+    font-size: 15pt;
   }
   .header ul li:hover{
     transition: all .5s;
     background-color: cornflowerblue;
     color: white;
     cursor: pointer;
+    text-shadow: 0.3px 0.3px 0.3px #fff;
+  }
+  .header ul li::selection{
+    color: #1D1D1D;
   }
 </style>

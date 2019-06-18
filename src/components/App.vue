@@ -78,4 +78,7 @@ data() {
   #count-timer{
     text-align: center;
   }
+  ::selection{
+    color: cornflowerblue;
+  }
 </style>
